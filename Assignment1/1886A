@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+
+    static void solve(long n) {
+        if (n < 7 || n == 9) {
+            System.out.println("NO");
+            return;
+        }
+
+        System.out.println("YES");
+        if (n % 3 == 0)
+            System.out.println(1 + " " + 4 + " " + (n - 5));
+        else
+            System.out.println(1 + " " + 2 + " " + (n - 3));
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+       long t = sc.nextLong();
+        while (t-- > 0) {
+            long n = sc.nextLong();
+            solve(n);
+        }
+    }
+}
